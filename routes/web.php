@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\TamuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,8 @@ use App\Http\Controllers\DataController;
 
 Route::get('/form',[DataController::class,'form'] );
 Route::post('/proses',([DataController::class,'proses'] ));
+
+Route::get('/tamu', [TamuController::class, 'index']);
+Route::get('/tamu/create', [TamuController::class, 'create']);
+Route::post('/tamu', [TamuController::class, 'store']);
     
